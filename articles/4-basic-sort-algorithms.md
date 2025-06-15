@@ -1,6 +1,6 @@
 ---
 title: 4 Basic Sort Algorithms 
-date: "2018-11-25T22:12:03.284Z"
+date: 2018-11-25
 description: "Hello World"
 tags: ['Algorithm']
 visible: true
@@ -138,7 +138,7 @@ O(n + logn) => O(n)
 ## Quicksort
 ![image](https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif)
 There are 2 steps:
-1. choose a pivot and divide the list to two parts, all elements on the left side of pivot are all <= pivot, all elements on the right side of pivot are all >= pivot.
+1. choose a pivot and divide the list to two parts, all elements on the left side of pivot are all {'<='} pivot, all elements on the right side of pivot are all {'>='} pivot.
 2. do quickSort for the two parts recursively. 
 ```java
 public class Solution {
@@ -188,11 +188,11 @@ public class Solution {
 ```
 Questions:
 
-- why left <= right not left < right?
+- why left {'<='} right not left {'<'} right?
 
 If `left < right`, at the end of while loop, the left will equal to right, and then we will do quicksort for two intervals `[start, right]` and `[left, end]`. There is an overlap between two intervals. Take [1, 2] as an example, at the end of the code, we should do `quickSort` for [1, 2] again, which means we do not reduce the size of the problem and causes infinite recursion.
 
-- why nums[left] < pivot not nums[left] <= pivot?
+- why nums[left] < pivot not nums[left] {'<='} pivot?
 
 Assume the list = [1 1 1 1 1 1], if `nums[left] <= pivot`, the left pointer will move to the end of the list. 
 ```
