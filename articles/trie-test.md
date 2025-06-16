@@ -1,5 +1,5 @@
 ---
-title: Trie
+title: Trie Test
 date: 2024-01-10
 tags: ["data-structures", "algorithms", "trees", "strings"]
 ---
