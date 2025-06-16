@@ -17,7 +17,7 @@ It has 3 main operations:
 
 Bellow is a trie which stores words: app, apple, apply and boy
 
-![TrieNode](/trie.png)
+![TrieNode](/images/trie.png)
 
 In a trie, each node represents a character or a partial string. The root node represents an empty string, and each additional node represents a character or a combination of characters that form a prefix or complete word. **The edges between nodes represent the characters that lead from one node to another.**
 
